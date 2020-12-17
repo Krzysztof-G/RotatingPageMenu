@@ -1,0 +1,98 @@
+.menu {
+    height: 100vh;
+    background-color: rgb(54, 39, 39);
+    width: 26%;
+    z-index: 0;
+    position: absolute;
+
+    .list {
+        div {
+            position: absolute;
+            width: 200px;
+            height: 60px;
+            bottom: 250px;
+            left: 30px;
+
+            p {
+                color: rgb(255, 255, 255);
+                position: absolute;
+                opacity: 0.6;
+                -webkit-animation: slide-right 0.8s ease forwards;
+                animation: slide-right 0.8s ease forwards;
+                left: 90px;
+                bottom: 0px;
+            }
+
+            i {
+                color: rgb(255, 255, 255);
+                position: absolute;
+                display: block;
+                font-size: 30px;
+                width: 60px;
+                height: 60px;
+                padding-left: 11px;
+                padding-top: 12px;
+                border: 2px solid rgb(255, 255, 255);
+                border-radius: 30px;
+                left: 10px;
+                -webkit-animation: slide-right 0.8s ease forwards;
+                animation: slide-right 0.8s ease forwards;
+            }
+
+            &:nth-child(2) {
+                bottom: 170px;
+                left: 60px;
+
+                i {
+                    padding-left: 13px;
+                    padding-top: 13px;
+                }
+            }
+
+            &:nth-child(3) {
+                bottom: 90px;
+                left: 90px;
+
+                i {
+                    padding-left: 13px;
+                    padding-top: 14px;
+                }
+            }
+
+            &:hover {
+                i {
+                    border: 2px solid rgb(235, 141, 141);
+                }
+
+                p {
+                    opacity: 1;
+                }
+            }
+        }
+
+        @-webkit-keyframes slide-right {
+            0% {
+                -webkit-transform: translateX(-400px);
+                transform: translateX(-400px);
+            }
+
+            100% {
+                -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+            }
+        }
+
+        @keyframes slide-right {
+            0% {
+                transform: translateX(-400px);
+            }
+
+            100% {
+                transform: translateX(0px);
+
+            }
+        }
+
+    }
+
+}

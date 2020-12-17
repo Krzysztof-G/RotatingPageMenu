@@ -12,9 +12,15 @@
 <body>
     <div class="menu">
         <div class="list">
-            <i class="fas fa-home"></i><p>MORE</p>
-            <i class="fas fa-phone"></i><p>COFFEE</p>
-            <i class="fas fa-heart"></i><p>PLEASE</p>
+            <div><i class="fas fa-home"></i><a href="#">
+                    <p>MORE</p>
+                </a></div>
+            <div><i class="fas fa-phone"></i><a href="#">
+                    <p>COFFEE</p>
+                </a></div>
+            <div><i class="fas fa-heart"></i><a href="#">
+                    <p>PLEASE</p>
+                </a></div>
         </div>
     </div>
     <div class="content">
@@ -25,11 +31,26 @@
         <div class="text">
             <h1>This is title</h1>
             <div class="social__media">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-linkedin"></i>
-                <i class="fab fa-behance-square"></i>
-                <i class="fab fa-youtube-square"></i>
+                <span class="fa-stack fa-1x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-1x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-1x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-1x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-behance fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-1x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                </span>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit esse sint mollitia officia deleniti
                 vero. Distinctio voluptatem perspiciatis quod quibusdam obcaecati culpa, quam, fugiat impedit voluptatum
@@ -56,7 +77,6 @@
                 aliquid.</p>
         </div>
     </div>
-    <script src="js/script.js" type="module"></script>
 </body>
 
 </html>

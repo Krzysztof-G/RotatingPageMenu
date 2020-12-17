@@ -5,105 +5,36 @@
 }
 
 body {
+  height: 100px;
   display: -ms-flexbox;
   display: flex;
   margin: 0;
   padding: 0;
   position: relative;
-  background-color: rosybrown;
-}
-
-.menu {
-  height: 100vh;
-  background-color: wheat;
-  width: 25%;
-  z-index: 0;
-  position: absolute;
-}
-
-.menu .list {
-  position: absolute;
-  bottom: 50px;
-  left: 50px;
-}
-
-.menu .list p {
-  position: absolute;
-  animation: slide-right 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.menu .list p:nth-child(2) {
-  bottom: 305px;
-  left: 80px;
-}
-
-.menu .list p:nth-child(4) {
-  bottom: 205px;
-  left: 120px;
-}
-
-.menu .list p:nth-child(6) {
-  bottom: 105px;
-  left: 160px;
-}
-
-.menu .list i {
-  position: absolute;
-  display: block;
-  font-size: 40px;
-  width: 60px;
-  height: 60px;
-  padding-left: 5px;
-  padding-top: 7px;
-  border: 2px solid rosybrown;
-  border-radius: 30px;
-  animation: slide-right 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.menu .list i:nth-child(1) {
-  bottom: 300px;
-}
-
-.menu .list i:nth-child(3) {
-  padding-left: 8px;
-  bottom: 200px;
-  left: 40px;
-}
-
-.menu .list i:nth-child(5) {
-  padding-top: 9px;
-  padding-left: 8px;
-  bottom: 100px;
-  left: 80px;
-}
-
-@keyframes slide-right {
-  0% {
-    transform: translateX(-400px);
-  }
-  100% {
-    transform: translateX(20px);
-  }
+  background-color: white;
+  font-family: "Lato", sans-serif;
 }
 
 .content {
   height: 100vh;
-  background-color: rosybrown;
-  width: 70%;
+  background-color: white;
+  width: 100%;
   z-index: 1;
   position: absolute;
   right: 0;
+  animation: rotate__content 0.7s forwards;
 }
 
 .content .burger {
   width: 250px;
   height: 250px;
   border-radius: 125px 125px 125px 125px;
-  background-color: red;
+  background-color: #eb8d8d;
   position: absolute;
   font-size: 40px;
-  top: -125px;
-  left: -190px;
+  top: -150px;
+  left: -125px;
+  animation: rotate__menu 0.7s forwards;
 }
 
 .content .burger button {
@@ -122,16 +53,16 @@ body {
 }
 
 .content .burger button i {
-  color: wheat;
+  color: white;
   font-size: 40px;
 }
 
 .content .text {
   position: absolute;
-  top: 80px;
+  top: 130px;
   height: auto;
   width: 70%;
-  right: 90px;
+  right: 290px;
   text-align: justify;
 }
 
@@ -140,40 +71,113 @@ body {
   margin-bottom: 50px;
 }
 
-.content .text .social__media i {
-  font-size: 40px;
-  color: wheat;
-  opacity: 0.6;
-  transition: 1s;
-  margin-right: 10px;
-  margin-bottom: 10px;
+.content .text .social__media span {
+  font-size: 20px;
+  color: #eb8d8d;
+  margin-right: -12px;
 }
 
-.content .text .social__media i:hover {
-  color: wheat;
-  opacity: 1;
-  transition: 1s;
+.content .text .social__media span i {
+  margin-left: -5px;
 }
 
 @keyframes rotate__content {
   0% {
     transform: rotate(0);
-    transform-origin: top;
+    transform-origin: 0% 0%;
   }
   100% {
-    transform: rotate(-45deg);
-    transform-origin: top;
+    transform: rotate(-23deg);
+    transform-origin: 0% 0%;
+    height: 115vh;
   }
 }
 
 @keyframes rotate__menu {
   0% {
     transform: rotate(0);
-    transform-origin: top;
+    transform-origin: center;
   }
   100% {
-    transform: rotate(-45deg);
-    transform-origin: top;
+    transform: rotate(-65deg);
+    transform-origin: center;
+  }
+}
+
+.menu {
+  height: 100vh;
+  background-color: #362727;
+  width: 26%;
+  z-index: 0;
+  position: absolute;
+}
+
+.menu .list div {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  bottom: 250px;
+  left: 30px;
+}
+
+.menu .list div p {
+  color: white;
+  position: absolute;
+  opacity: 0.6;
+  animation: slide-right 0.8s ease forwards;
+  left: 90px;
+  bottom: 0px;
+}
+
+.menu .list div i {
+  color: white;
+  position: absolute;
+  display: block;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  padding-left: 11px;
+  padding-top: 12px;
+  border: 2px solid white;
+  border-radius: 30px;
+  left: 10px;
+  animation: slide-right 0.8s ease forwards;
+}
+
+.menu .list div:nth-child(2) {
+  bottom: 170px;
+  left: 60px;
+}
+
+.menu .list div:nth-child(2) i {
+  padding-left: 13px;
+  padding-top: 13px;
+}
+
+.menu .list div:nth-child(3) {
+  bottom: 90px;
+  left: 90px;
+}
+
+.menu .list div:nth-child(3) i {
+  padding-left: 13px;
+  padding-top: 14px;
+}
+
+.menu .list div:hover i {
+  border: 2px solid #eb8d8d;
+}
+
+.menu .list div:hover p {
+  opacity: 1;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
 /*# sourceMappingURL=style.css.map */
